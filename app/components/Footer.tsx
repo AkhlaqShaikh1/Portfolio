@@ -38,6 +38,7 @@ const Footer = () => {
               >
                 <img
                   src={item.img}
+                  key={index}
                   alt={item.id.toString()}
                   width={20}
                   height={20}
