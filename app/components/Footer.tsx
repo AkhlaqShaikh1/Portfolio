@@ -1,7 +1,6 @@
 import React from "react";
 import MagicButton from "./MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
-import { sobel } from "three/webgpu";
 import { socialMedia } from "@/data";
 import Image from "next/image";
 

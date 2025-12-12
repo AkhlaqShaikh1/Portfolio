@@ -283,7 +283,7 @@ const ShaderMaterial = ({
 
   return (
     <mesh ref={ref as any}>
-      <planeGeometry args={[2, 2]} />
+      <planeGeometry args={[2, 2, 1, 1]} />
       <primitive object={material} attach="material" />
     </mesh>
   );
