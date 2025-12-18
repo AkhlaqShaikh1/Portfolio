@@ -132,3 +132,36 @@ export const navItems = [
       link: "https://www.linkedin.com/in/akhlaq-shaikh/"
     },
   ];
+
+  //-------TechStack Arry--------
+  export const platforms = [
+    { name: "AWS", src: "/aws1.svg" },
+    { name: "Azure", src: "/azure1.svg" },
+    { name: "OpenAI", src: "/openAI.png" },
+    { name: "Mistral AI", src: "/mistral-AI.svg" },
+    { name: "NestJs", src: "/nestjs.svg" },
+    { name: "React", src: "/react.svg" },
+    { name: "NextJs", src: "/nextjs.svg", className: "invert" },
+    { name: "Redux", src: "/redux.svg" },
+    { name: "TensorFlow", src: "/tensorflow.svg" },
+    { name: "Flutter", src: "/flutter.svg" },
+    { name: "Docker", src: "/docker.svg" },
+    { name: "Python", src: "/python.svg" },
+    { name: "JavaScript", src: "/javascript.svg" },
+    { name: "TypeScript", src: "/typescript.svg" },
+    { name: "SQL", src: "/sql.svg", className: "invert" },
+    { name: "MySQL", src: "/mysql.svg" },
+    { name: "PostgreSQL", src: "/postgresql.svg" },
+    { name: "MongoDB", src: "/mongo.svg" },
+    { name: "Django", src: "/django.svg" },
+    { name: "Fastify", src: "/fastify.svg", className: "invert" },
+    { name: "express", src: "/express.svg", className: "invert" },
+    { name: "TailwindCss", src: "/tailwindcss.svg" },
+    { name: "Firebase", src: "/firebase.svg" },
+    { name: "Ethereum", src: "/ethereum.svg" },
+    { name: "GO", src: "/go.svg" },
+    { name: "Hugging Face", src: "/hugging.png" },
+    { name: "Make", src: "/make.png" },
+    { name: "N8n", src: "/n8n.png" },
+    { name: "Pinecone", src: "/pinecone.png" },
+  ];

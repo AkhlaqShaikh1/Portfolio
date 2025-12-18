@@ -22,6 +22,14 @@ export default function ProjectsCarousel() {
     return () => window.removeEventListener("resize", checkScreenSize)
   }, [])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1))
+    }, 4000) // Change slide every 4 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
   const goToPrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1))
   }
