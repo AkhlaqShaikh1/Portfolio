@@ -158,7 +158,6 @@ export const navItems = [
     { name: "express", src: "/express.svg", className: "invert" },
     { name: "TailwindCss", src: "/tailwindcss.svg" },
     { name: "Firebase", src: "/firebase.svg" },
-    { name: "Ethereum", src: "/ethereum.svg" },
     { name: "GO", src: "/go.svg" },
     { name: "Hugging Face", src: "/hugging.png" },
     { name: "Make", src: "/make.png" },

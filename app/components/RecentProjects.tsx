@@ -14,7 +14,7 @@ export default function ProjectsCarousel() {
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 640)
-      setIsLargeScreen(window.innerWidth >= 1024) // lg breakpoint
+      setIsLargeScreen(window.innerWidth >= 1024)
     }
     
     checkScreenSize()
@@ -25,8 +25,7 @@ export default function ProjectsCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1))
-    }, 4000) // Change slide every 4 seconds
-
+    }, 4000)
     return () => clearInterval(interval)
   }, [])
 
@@ -61,23 +60,26 @@ export default function ProjectsCarousel() {
 
   return (
     <section 
-      className="relative min-h-screen overflow-hidden py-12 sm:py-16 md:py-20 px-2 sm:px-4" 
+      className="relative min-h-min overflow-hidden 
+        py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 px-2 sm:px-4 md:px-6 lg:px-8" 
       style={{ backgroundColor: "#000319" }}
     >
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <h1 className="text-center mb-10 sm:mb-12 md:mb-16 px-4">
-          <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto">
+        <h1 className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20 px-4">
+          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
             A small selection of{" "}
           </span>
           <span 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold" 
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold" 
             style={{ color: "#CBACF9" }}
           >
             recent projects
           </span>
         </h1>
 
-        <div className="relative w-full max-w-6xl mx-auto mb-8 sm:mb-10 md:mb-12 h-[450px] sm:h-[550px] md:h-[650px] lg:h-[750px]">
+        {/* Reduced height container */}
+        <div className="relative w-full max-w-[1400px] mx-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12
+          h-[380px] sm:h-[420px] md:h-[480px] lg:h-[520px] xl:h-[580px]">
           <div className="absolute inset-0 flex items-center justify-center">
             {projects.map((project, index) => {
               const position = getCardPosition(index)
@@ -89,7 +91,8 @@ export default function ProjectsCarousel() {
                 <div
                   key={project.id}
                   className="absolute transition-all duration-500 ease-out 
-                    w-[92vw] sm:w-[80vw] md:w-[650px] lg:w-[750px] max-w-[750px]"
+                    w-[85vw] sm:w-[70vw] md:w-[480px] lg:w-[520px] xl:w-[580px]
+                    max-w-[85vw] sm:max-w-[70vw] md:max-w-[480px] lg:max-w-[520px] xl:max-w-[580px]"
                   style={{
                     transform: getTransform(position, isCenter),
                     opacity: isCenter ? 1 : (isMobile ? 0 : isAdjacent ? 0.4 : 0),
@@ -103,14 +106,16 @@ export default function ProjectsCarousel() {
                     href={project.link}
                     containerClassName={!isLargeScreen ? "pointer-events-none" : ""}
                   >
-                    {/* Image container - wider on mobile, big on desktop */}
+                    {/* Smaller image container */}
                     <div className="relative flex items-center justify-center 
-                      w-[85vw] sm:w-[450px] md:w-[500px] lg:w-[550px] xl:w-[600px]
-                      h-[30vh] sm:h-[30vh] md:h-[35vh] lg:h-[40vh] 
-                      overflow-hidden mb-6 sm:mb-8 md:mb-10"
+                      w-[78vw] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px]
+                      h-[25vh] sm:h-[180px] md:h-[220px] lg:h-[260px] xl:h-[300px]
+                      min-h-[160px] sm:min-h-[180px] md:min-h-[220px] lg:min-h-[260px] xl:min-h-[300px]
+                      max-h-[220px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px] xl:max-h-[360px]
+                      overflow-hidden mb-4 sm:mb-5 md:mb-6 lg:mb-8"
                     >
                       <div
-                        className="relative overflow-hidden w-full h-full rounded-2xl sm:rounded-3xl"
+                        className="relative overflow-hidden w-full h-full rounded-xl sm:rounded-2xl lg:rounded-3xl"
                         style={{ backgroundColor: "#13162d" }}
                       >
                         <img 
@@ -126,31 +131,35 @@ export default function ProjectsCarousel() {
                       </div>
                     </div>
 
-                    <h1 className="font-bold text-xl sm:text-xl md:text-2xl lg:text-3xl text-white line-clamp-1 mb-2 sm:mb-3">
+                    {/* Smaller text */}
+                    <h1 className="font-bold text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-2xl text-white line-clamp-1 
+                      mb-1.5 sm:mb-2 md:mb-2.5 lg:mb-3">
                       {project.title}
                     </h1>
 
                     <p
                       style={{ color: "#BEC1DD" }}
-                      className="text-sm sm:text-base md:text-lg font-light line-clamp-3 mb-5 sm:mb-6 md:mb-7"
+                      className="text-xs sm:text-sm md:text-base lg:text-base xl:text-lg font-light line-clamp-2 
+                        mb-4 sm:mb-4 md:mb-5 lg:mb-6"
                     >
                       {project.des}
                     </p>
 
-                    <div className="flex items-center justify-between gap-2">
+                    {/* Smaller icons and link */}
+                    <div className="flex items-center justify-between gap-2 lg:gap-3">
                       <div className="flex items-center">
                         {project.iconLists.map((icon, idx) => (
                           <div
                             key={idx}
                             style={{ transform: `translateX(-${5 * idx * 2}px)` }}
                             className="border border-white/[0.2] rounded-full bg-black 
-                              w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12
+                              w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-10 xl:h-10
                               flex justify-center items-center"
                           >
                             <img 
                               src={icon || "/placeholder.svg"} 
                               alt={`icon-${idx}`} 
-                              className="p-1.5 sm:p-2" 
+                              className="p-1 sm:p-1.5 lg:p-2" 
                             />
                           </div>
                         ))}
@@ -158,13 +167,13 @@ export default function ProjectsCarousel() {
 
                       <div className="flex justify-center items-center">
                         <p 
-                          className="flex text-sm sm:text-sm md:text-base whitespace-nowrap" 
+                          className="flex text-xs sm:text-sm md:text-sm lg:text-base xl:text-base whitespace-nowrap" 
                           style={{ color: "#CBACF9" }}
                         >
                           Check Live Site
                         </p>
                         <FaLocationArrow 
-                          className="ms-2 sm:ms-3" 
+                          className="ms-1.5 sm:ms-2 lg:ms-3 w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-4 lg:h-4" 
                           color="#CBACF9" 
                         />
                       </div>
@@ -176,10 +185,11 @@ export default function ProjectsCarousel() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 w-full max-w-6xl mx-auto">
+        {/* Smaller navigation */}
+        <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full max-w-[1400px] mx-auto pt-4 sm:pt-0">
           <button
             onClick={goToPrev}
-            className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 
+            className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12
               rounded-full flex items-center justify-center 
               transition-all hover:scale-110 active:scale-95"
             style={{
@@ -188,7 +198,7 @@ export default function ProjectsCarousel() {
             }}
             aria-label="Previous project"
           >
-            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
+            <ChevronLeft className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white" />
           </button>
 
           <div className="flex items-center gap-1.5 sm:gap-2 md:gap-2.5">
@@ -199,11 +209,11 @@ export default function ProjectsCarousel() {
                 className="rounded-full transition-all duration-300"
                 style={{
                   width: index === currentIndex 
-                    ? (isMobile ? "8px" : "10px") 
-                    : (isMobile ? "6px" : "8px"),
+                    ? (isMobile ? "7px" : "8px") 
+                    : (isMobile ? "5px" : "6px"),
                   height: index === currentIndex 
-                    ? (isMobile ? "8px" : "10px") 
-                    : (isMobile ? "6px" : "8px"),
+                    ? (isMobile ? "7px" : "8px") 
+                    : (isMobile ? "5px" : "6px"),
                   backgroundColor: index === currentIndex ? "#CBACF9" : "#4B5563",
                 }}
                 aria-label={`Go to project ${index + 1}`}
@@ -213,7 +223,7 @@ export default function ProjectsCarousel() {
 
           <button
             onClick={goToNext}
-            className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 
+            className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12
               rounded-full flex items-center justify-center 
               transition-all hover:scale-110 active:scale-95"
             style={{
@@ -222,7 +232,7 @@ export default function ProjectsCarousel() {
             }}
             aria-label="Next project"
           >
-            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
+            <ChevronRight className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white" />
           </button>
         </div>
       </div>
