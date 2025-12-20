@@ -90,9 +90,11 @@ export default function ProjectsCarousel() {
               return (
                 <div
                   key={project.id}
-                  className="absolute transition-all duration-500 ease-out 
+                  className={`absolute transition-all duration-500 ease-out
+                    flex items-center justify-center
                     w-[85vw] sm:w-[70vw] md:w-[480px] lg:w-[520px] xl:w-[580px]
-                    max-w-[85vw] sm:max-w-[70vw] md:max-w-[480px] lg:max-w-[520px] xl:max-w-[580px]"
+                    h-[380px] sm:h-[420px] md:h-[480px] lg:h-[520px] xl:h-[580px]
+                    ${isCenter ? 'hover:!z-[100]' : ''}`}
                   style={{
                     transform: getTransform(position, isCenter),
                     opacity: isCenter ? 1 : (isMobile ? 0 : isAdjacent ? 0.4 : 0),
@@ -101,10 +103,10 @@ export default function ProjectsCarousel() {
                     visibility: isVisible ? "visible" : "hidden",
                   }}
                 >
-                  <PinContainer 
-                    title={project.title} 
+                  <PinContainer
+                    title={project.title}
                     href={project.link}
-                    containerClassName={!isLargeScreen ? "pointer-events-none" : ""}
+                    containerClassName={`${!isLargeScreen ? "pointer-events-none" : ""} mx-auto`}
                   >
                     {/* Smaller image container */}
                     <div className="relative flex items-center justify-center 
