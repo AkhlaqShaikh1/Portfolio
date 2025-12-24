@@ -61,19 +61,19 @@ export const navItems = [
   export const projects = [
     {
       id: 1,
-      title: "Worlde Clone Using React",
-      des: "A wordle clone built using React & Tailwind CSS. It's a word game where you have to guess a 5-letter word in 6 attempts.",
-      img: "/p1.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg",],
-      link: "https://wordle-using-react.vercel.app/",
-    },
-    {
-      id: 2,
       title: "A HTTP Server in Rust",
       des: "A simple HTTP server written in Rust using the standard library. It can serve static files and dynamic content.",
       img: "/p2.jpg",
       iconLists: ["/rust.png"],
       link: "https://github.com/AkhlaqShaikh1/HTTP-Rust-Server",
+    },
+     {
+      id: 2,
+      title: "Amish Toor",
+      des: "Software Engineer",
+      img: "/amish.png",
+      iconLists: [ "/mongodb-icon.svg","/ts.svg" ,"/node.svg", "/postgresql.svg", "/react.svg"],
+      link: "https://amish-toor.vercel.app/",
     },
     {
       id: 3,
@@ -83,7 +83,54 @@ export const navItems = [
       iconLists: [ "/flutter.svg","/mongodb-icon.svg","/ts.svg", "/eth.svg" ,"/node.svg"],
       link: "https://github.com/AkhlaqShaikh1/",
     },
-    
+    {
+      id: 4,
+      title: "Ship Go",
+      des: "ShipGo delivers luggage and sporting equipment door to door from $34.99, eliminating airport baggage fees and hassles with insured tracking service.",
+      img: "/lugage.png",
+      iconLists: [ "/mongodb-icon.svg","/ts.svg" ,"/node.svg"],
+      link: "https://www.shipgo.com/",
+    },
+    {
+      id: 5,
+      title: "ShipGo Application",
+      des: "Travel the world and earn money by delivering goods internationally using your extra luggage space with ShipGo's flexible delivery app.",
+      img: "/shipgo.png",
+      iconLists: [ "/flutter.svg"],
+      link: "https://play.google.com/store/apps/details?id=com.shipgo.shipgo",
+    },
+    {
+      id: 6,
+      title: "ShipGo-Live",
+      des: "Travel the world and earn money by delivering goods internationally using your extra luggage space with ShipGo's flexible delivery app.",
+      img: "/shipgo.png",
+      iconLists: [ "/flutter.svg"],
+      link: "https://apps.apple.com/us/app/shipgo-live/id6744827048",
+    },
+    {
+      id: 7,
+      title: "German Excel",
+      des: "GermanExcel offers online courses and model test e-books to help students prepare for German language exams (Telc A2-B1, DTZ, and Telc B1)",
+      img: "/german1.jpg",
+      iconLists: [ "/tailwindcss.svg", "/node.svg"],
+      link: "https://www.germanexcel.com/",
+    },
+    {
+      id: 8,
+      title: "Peets Express Restoration",
+      des: "Peets Express Restoration is a 24/7 water damage restoration and mold remediation company serving homeowners in the Sacramento area, offering less than 45-minute emergency response times.",
+      img: "/peets.webp",
+      iconLists: [ "/wordpress.svg"],
+      link: "https://www.peetsexpressrestoration.com/landing-page/",
+    },
+    {
+      id: 9,
+      title: "Vincent deFilippo",
+      des: "Vincent deFilippo is a New York-based life coach and Monroe College professor offering career consulting services with packages ranging from 5 to 20 sessions",
+      img: "/career.jpg",
+      iconLists: [ "/wordpress.svg"],
+      link: "https://www.vincentdefilippo.com/career-mentor",
+    },
   ];
   
   
@@ -92,31 +139,31 @@ export const navItems = [
   export const workExperience = [
     {
       id: 1,
-      title: "Frontend Engineer Intern",
+      title: "Senior Software Engineer - Intellexal Solutions",
       desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
     {
       id: 2,
-      title: "Mobile App Dev - Cruze Pakistan",
-      desc: "Designed and developed mobile app for both iOS & Android platforms using Flutter.",
+      title: "Application Development",
+      desc: "Designed and developed scalable web and mobile solutions, including cross-platform iOS and Android applications using Flutter.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/exp2.svg",
     },
     {
       id: 3,
-      title: "Freelance App/Web Dev Project",
-      desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-      className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/exp3.svg",
+      title: "Amish Toor - Software Engineer",
+      desc: "Full stack developer building seamless user experiences and robust backend systems with modern frameworks.",
+      className: "md:col-span-2",
+      thumbnail: "/exp4.svg",
     },
     {
       id: 4,
-      title: "Flutter Intern - Distak Solutions",
-      desc: "Developed and maintained user-facing features using modern frontend technologies.",
-      className: "md:col-span-2",
-      thumbnail: "/exp4.svg",
+      title: "App & Web Development Services | Available for Freelance Projects",
+      desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+      className: "md:col-span-2", // change to md:col-span-2
+      thumbnail: "/exp3.svg",
     },
   ];
   
@@ -135,8 +182,8 @@ export const navItems = [
 
   //-------TechStack Arry--------
   export const platforms = [
-    { name: "AWS", src: "/aws1.svg" },
-    { name: "Azure", src: "/azure1.svg" },
+    { name: "AWS", src: "/aws3.png" },
+    { name: "Azure", src: "/azure2.png" },
     { name: "OpenAI", src: "/openAI.png" },
     { name: "Mistral AI", src: "/mistral-AI.svg" },
     { name: "NestJs", src: "/nestjs.svg" },
