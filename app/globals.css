@@ -88,25 +88,28 @@
   }
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000319;
+  background-color: #000319;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a855f7;
-  border-radius: 5px;
+  background-color: #a855f7;
+  border-radius: 9999px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #9333ea;
+::-webkit-scrollbar-thumb:active {
+  background-color: #9333ea;
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #a855f7 #000319;
+/* Firefox only */
+@supports (scrollbar-color: auto) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #a855f7 #000319;
+  }
 }
