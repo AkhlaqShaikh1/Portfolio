@@ -3,12 +3,17 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import Snowfall from "./components/Snowfall";
+import ContactCTA from "./components/CTA";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Akhlaq's Portfolio",
   description: "Modern portfolio website for Akhlaq",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ContactCTA />
           {children}
         </ThemeProvider>
       </body>

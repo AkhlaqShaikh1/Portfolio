@@ -87,3 +87,29 @@
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000319;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a855f7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #9333ea;
+}
+
+/* Firefox only */
+@supports (scrollbar-color: auto) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #a855f7 #000319;
+  }
+}

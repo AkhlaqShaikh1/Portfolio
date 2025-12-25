@@ -2,6 +2,7 @@ import { FaHome } from "react-icons/fa";
 import Hero from "./components/Hero";
 import { FloatingNav } from "./components/ui/floating-navbar";
 import Grid from "./components/Grid";
+import TechStackComponent from "./components/TechStack";
 import RecentProjects from "./components/RecentProjects";
 import { navItems } from "@/data";
 import Experience from "./components/Experience";
@@ -15,6 +16,7 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
+        <TechStackComponent />
         <RecentProjects />
         <Experience />
         <Process />
