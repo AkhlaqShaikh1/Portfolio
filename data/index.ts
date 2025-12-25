@@ -25,16 +25,6 @@ export const navItems = [
       img: "",
       spareImg: "",
     },
-    // {
-    //   id: 3,
-    //   title: "My tech stack",
-    //   description: "I constantly try to improve",
-    //   className: "lg:col-span-2 md:col-span-3 md:row-span-2 ",
-    //   imgClassName: "",
-    //   titleClassName: "justify-center",
-    //   img: "",
-    //   spareImg: "",
-    // },
     {
       id: 4,
       title: "Tech enthusiast with a passion for development.",
@@ -45,17 +35,6 @@ export const navItems = [
       img: "/grid.svg",
       spareImg: "/b4.svg",
     },
-
-    // {
-    //   id: 6,
-    //   title: "Do you want to start a project together?",
-    //   description: "",
-    //   className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    //   imgClassName: "",
-    //   titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    //   img: "",
-    //   spareImg: "",
-    // },
   ];
   
   export const projects = [
@@ -140,7 +119,7 @@ export const navItems = [
     {
       id: 1,
       title: "Senior Software Engineer - Intellexal Solutions",
-      desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+      desc: "Architecting robust systems with Docker, CI/CD pipelines, queues, cron jobs, and microservices — keeping everything running smoothly at scale.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
@@ -153,15 +132,15 @@ export const navItems = [
     },
     {
       id: 3,
-      title: "Amish Toor - Software Engineer",
+      title: "Software Engineer - Full Stack Development",
       desc: "Full stack developer building seamless user experiences and robust backend systems with modern frameworks.",
       className: "md:col-span-2",
       thumbnail: "/exp4.svg",
     },
     {
       id: 4,
-      title: "App & Web Development Services | Available for Freelance Projects",
-      desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+      title: "Freelance Developer => Open for New Projects",
+      desc: "Turning ideas into fully deployed apps, from first wireframe to App Store launch. Let's build something great together.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/exp3.svg",
     },
