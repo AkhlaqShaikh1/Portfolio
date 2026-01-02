@@ -48,8 +48,8 @@ export const navItems = [
     },
      {
       id: 2,
-      title: "Amish Toor",
-      des: "Software Engineer",
+      title: "Software Engineer",
+      des: "Full-stack engineer crafting intuitive user experiences and scalable backend architectures with modern technologies.",
       img: "/amish.png",
       iconLists: [ "/mongodb-icon.svg","/ts.svg" ,"/node.svg", "/postgresql.svg", "/react.svg"],
       link: "https://amish-toor.vercel.app/",
