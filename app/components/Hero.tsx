@@ -3,6 +3,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import MagicButton from "./MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -24,6 +25,13 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] m:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+          <Image
+            src="/logo.png"
+            alt="COMS Logo"
+            width={500}
+            height={500}
+            className="mb-6 rounded-xl shadow-lg"
+          />
           <h2 className="uppercase tracking-widest text-xs text-blue-100 max-w-80"></h2>
           <TextGenerateEffect
             words="Transforming Concepts into Seamless Experiences"
