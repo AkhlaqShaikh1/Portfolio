@@ -52,7 +52,7 @@ export const navItems = [
       des: "RecruitEasy is an AI powered recruitment platform that streamlines the hiring process by automatically matching and ranking candidates against job descriptions",
       img: "/recruit.png",
       iconLists: [ "/ts.svg" ,"/redux.svg", "/react.svg"],
-      link: "https://amish-toor.vercel.app/",
+      link: "https://recruit-easy.vercel.app/",
     },
     {
       id: 3,
@@ -109,6 +109,30 @@ export const navItems = [
       img: "/career.jpg",
       iconLists: [ "/wordpress.svg"],
       link: "https://www.vincentdefilippo.com/career-mentor",
+    },
+    {
+      id: 10,
+      title: "SabSuno Website",
+      des: "SabSuno is a collaborative audiobook platform that enables users to discover, listen to, and create their own audiobooks.",
+      img: "/sabsuno.png",
+      iconLists: [ "/react.svg", "/nestjs.svg"],
+      link: "https://sabsuno.com/",
+    },
+    {
+      id: 11,
+      title: "SabSuno Portal",
+      des: "SabSuno Reader Portal is the creator and editor hub for the SabSuno audiobook platform where content creators can record, edit, and publish audiobooks",
+      img: "/sabsuno-portal.png",
+      iconLists: [ "/react.svg", "/nestjs.svg"],
+      link: "https://ssabcs.com/",
+    },
+    {
+      id: 12,
+      title: "SabSuno",
+      des: "SabSuno is a mobile audiobook app that enables users to discover and listen to audiobooks",
+      img: "/sabsuno-app.jpeg",
+      iconLists: [ "/react.svg"],
+      link: "https://apps.apple.com/us/app/sabsuno/id6758136750",
     },
   ];
   
