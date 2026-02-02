@@ -8,9 +8,9 @@ const TechStackComponent = () => {
     <div className="w-full py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#000319' }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-10 sm:mb-14 md:mb-16">
-          <span className="bg-[#CBACF9] text-black px-2 rounded-md">
-            I AM EXPERIENCED
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-10 sm:mb-14 md:mb-16">
+          <span className="bg-[#CBACF9] text-black px-2 rounded-md ">
+            WE ARE EXPERIENCED
           </span>{" "}
           <span className="text-white">IN THE LATEST PLATFORMS</span>
         </h2>

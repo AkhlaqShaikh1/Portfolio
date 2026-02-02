@@ -48,10 +48,10 @@ export const navItems = [
     },
      {
       id: 2,
-      title: "Software Engineer",
-      des: "Full-stack engineer crafting intuitive user experiences and scalable backend architectures with modern technologies.",
-      img: "/amish.png",
-      iconLists: [ "/mongodb-icon.svg","/ts.svg" ,"/node.svg", "/postgresql.svg", "/react.svg"],
+      title: "Recruit Easy",
+      des: "RecruitEasy is an AI powered recruitment platform that streamlines the hiring process by automatically matching and ranking candidates against job descriptions",
+      img: "/recruit.png",
+      iconLists: [ "/ts.svg" ,"/redux.svg", "/react.svg"],
       link: "https://amish-toor.vercel.app/",
     },
     {
