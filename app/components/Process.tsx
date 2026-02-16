@@ -8,7 +8,7 @@
     return (
       <section className="w-full py-20">
         <h1 className="heading ">
-          My Development<span className="text-purple"> Process</span>
+          Our Development<span className="text-purple"> Process</span>
         </h1>
         <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-6">
           <Card
@@ -24,7 +24,7 @@
           <Card
             title="Development And Progress Update"
             icon={<AceternityIcon order={"Phase 2"} />}
-            description="Once we agree on the project details, I'll start working on the project. I'll provide you with regular updates on the project progress. I'll also provide you with a demo of the project."
+            description="Once we agree on the project details, We'll start working on the project. We'll provide you with regular updates on the project progress. We'll also provide you with a demo of the project."
           >
             <CanvasRevealEffect
               animationSpeed={5}
@@ -41,7 +41,7 @@
           <Card
             title="Testing"
             icon={<AceternityIcon order={"Phase 3"} />}
-            description="I'll deploy the project to a staging environment for thorough testing. You can review functionality, user experience, and performance. I'll address any bugs or issues and refine based on your feedback."
+            description="We'll deploy the project to a staging environment for thorough testing. You can review functionality, user experience, and performance. We'll address any bugs or issues and refine based on your feedback."
           >
             <CanvasRevealEffect
               animationSpeed={3}
@@ -52,7 +52,7 @@
           <Card
             title="Deployment & Launch"
             icon={<AceternityIcon order={"Phase 4"} />}
-            description="Once testing is complete and you're satisfied, I'll deploy the project to production. I'll monitor the launch, ensure everything runs smoothly, and provide post-launch support and documentation."
+            description="Once testing is complete and you're satisfied, We'll deploy the project to production. We'll monitor the launch, ensure everything runs smoothly, and provide post-launch support and documentation."
           >
             <CanvasRevealEffect
               animationSpeed={4}

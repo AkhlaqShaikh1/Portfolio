@@ -13,10 +13,10 @@ const Footer = () => {
           <span className="text-purple"> world?</span>
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let's discuss how we can make an{" "}
+          Reach out to us today and let's discuss how we can make an{" "}
           <span className="text-purple">impact</span>
         </p>
-        <a href="mailto:akhlaqshaikh03@gmail.com">
+        <a href="mailto:coms.adv.eng@gmail.com">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -35,7 +35,7 @@ const Footer = () => {
             className="rounded-lg"
           />
           <p className="md:text-base text-sm md:font-normal font-light">
-            Copyright Akhlaq Ahmed Shaikh, 2026
+            Copyright Coms Advance Engineering, 2026. All rights reserved.
           </p>
         </div>
         <div className="flex items-center md:gap-3 gap-6 mt-2">

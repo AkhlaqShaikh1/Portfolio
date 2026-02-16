@@ -8,8 +8,8 @@ import ContactCTA from "./components/CTA";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Akhlaq's Portfolio",
-  description: "Modern portfolio website for Akhlaq",
+  title: "Coms Advance Engineering - Transforming Ideas into Reality",
+  description: "Modern portfolio website for Coms Advance Engineering",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",

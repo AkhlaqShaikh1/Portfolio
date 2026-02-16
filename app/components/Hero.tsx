@@ -37,12 +37,12 @@ const Hero = () => {
             words="Transforming Concepts into Seamless Experiences"
             className="text-center text-[40px] md:text-4xl lg:text-6xl"
           />
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+          {/* <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I'm Akhlaq Shaikh, A Full Stack Developer based in Pakistan.
-          </p>
+          </p> */}
           <a href="#projects">
             <MagicButton
-              title="Show my work"
+              title="Show our work"
               icon={<FaLocationArrow />}
               position="right"
             />

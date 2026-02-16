@@ -5,7 +5,7 @@ import Grid from "./components/Grid";
 import TechStackComponent from "./components/TechStack";
 import RecentProjects from "./components/RecentProjects";
 import { navItems } from "@/data";
-import Experience from "./components/Experience";
+// import Experience from "./components/Experience";
 import Process from "./components/Process";
 import Footer from "./components/Footer";
 
@@ -18,7 +18,7 @@ export default function Home() {
         <Grid />
         <TechStackComponent />
         <RecentProjects />
-        <Experience />
+        {/* <Experience /> */}
         <Process />
         <Footer />
       </div>
