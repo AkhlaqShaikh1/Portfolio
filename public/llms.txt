@@ -1,0 +1,34 @@
+# ComEngineering Services
+
+> Software engineering services specializing in full-stack development, mobile applications, and AI integration.
+
+## About
+
+ComEngineering Services is a software development company that builds web applications, mobile apps, and enterprise solutions. We prioritize client collaboration and are flexible with time zone communications.
+
+## Services
+
+- Full-Stack Web Development (React, Next.js, NestJS, Django, Express)
+- Mobile Application Development (Flutter for iOS and Android)
+- Blockchain Development (Ethereum, Solidity)
+- AI/ML Integration (OpenAI, TensorFlow, Hugging Face)
+- Cloud & DevOps (AWS, Azure, Docker)
+- Database Design (PostgreSQL, MongoDB, MySQL)
+
+## Tech Stack
+
+React, Next.js, NestJS, Flutter, TypeScript, Python, Go, Rust, Docker, AWS, Azure, PostgreSQL, MongoDB, Firebase, TailwindCSS, Redux, TensorFlow, OpenAI, Pinecone
+
+## Projects
+
+- RecruitEasy: AI-powered recruitment platform for candidate matching
+- Commercio: Blockchain-based e-commerce platform
+- ShipGo: Luggage delivery service web and mobile apps
+- SabSuno: Collaborative audiobook platform with web, portal, and mobile apps
+- GermanExcel: Online German language exam preparation platform
+- HTTP Server in Rust: Custom HTTP server implementation
+
+## Contact
+
+- Website: https://comengineering.services
+- LinkedIn: https://www.linkedin.com/company/coms-advance-engineering-llc
