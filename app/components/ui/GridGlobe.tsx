@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
@@ -8,6 +7,41 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
 });
 
 export function GridGlobe() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Default to true to prevent flash
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Check if mobile
+    setIsMobile(window.innerWidth < 768);
+
+    // Only set up observer if not mobile
+    if (window.innerWidth >= 768 && containerRef.current) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect(); // Only load once
+          }
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(containerRef.current);
+      return () => observer.disconnect();
+    }
+  }, []);
+
+  // Don't render globe on mobile at all
+  if (isMobile) {
+    return (
+      <div className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full">
+        <div className="max-w-7xl mx-auto w-full relative h-96 px-4 flex items-center justify-center">
+          <div className="text-purple text-xl font-semibold">Global Reach</div>
+        </div>
+      </div>
+    );
+  }
+
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -395,11 +429,14 @@ export function GridGlobe() {
   ];
 
   return (
-    <div className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full">
+    <div
+      ref={containerRef}
+      className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full"
+    >
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-96 px-4">
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
         <div className="absolute w-full h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
+          {isVisible && <World data={sampleArcs} globeConfig={globeConfig} />}
         </div>
       </div>
     </div>
