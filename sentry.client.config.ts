@@ -8,11 +8,11 @@ Sentry.init({
   dsn: "https://ce8b075cff1151575ed01e0ccf8635b2@o4507730379210752.ingest.de.sentry.io/4507730381307984",
 
   // Adjust this value in production, or use tracesSampler for greater control
-  tracesSampleRate: 1,
+  tracesSampleRate: 0.1,
 
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
-  replaysOnErrorSampleRate: 1.0,
+  replaysOnErrorSampleRate: 0.2,
 
   // This sets the sample rate to be 10%. You may want this to be 100% while
   // in development and sample at a lower rate in production

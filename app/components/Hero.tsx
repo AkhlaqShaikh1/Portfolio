@@ -2,7 +2,7 @@ import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import MagicButton from "./MagicButton";
-import { FaLocationArrow } from "react-icons/fa";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 const Hero = () => {
@@ -43,7 +43,7 @@ const Hero = () => {
           <a href="#projects">
             <MagicButton
               title="Show our work"
-              icon={<FaLocationArrow />}
+              icon={<ArrowUpRight className="w-4 h-4" />}
               position="right"
             />
           </a>

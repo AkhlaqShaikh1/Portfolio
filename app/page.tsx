@@ -1,13 +1,16 @@
-import { FaHome } from "react-icons/fa";
+import dynamic from "next/dynamic";
 import Hero from "./components/Hero";
 import { FloatingNav } from "./components/ui/floating-navbar";
-import Grid from "./components/Grid";
-import TechStackComponent from "./components/TechStack";
-import RecentProjects from "./components/RecentProjects";
 import { navItems } from "@/data";
-// import Experience from "./components/Experience";
-import Process from "./components/Process";
-import Footer from "./components/Footer";
+
+// Lazy load heavy components for better performance
+const Grid = dynamic(() => import("./components/Grid"), {
+  loading: () => <div className="h-screen" />,
+});
+const TechStackComponent = dynamic(() => import("./components/TechStack"));
+const RecentProjects = dynamic(() => import("./components/RecentProjects"));
+const Process = dynamic(() => import("./components/Process"));
+const Footer = dynamic(() => import("./components/Footer"));
 
 export default function Home() {
   return (

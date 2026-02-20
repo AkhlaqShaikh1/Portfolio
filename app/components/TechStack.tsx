@@ -1,8 +1,8 @@
 "use client";
 import { platforms } from "@/data"
+import Image from "next/image";
 
 const TechStackComponent = () => {
-  const defaultClasses= "w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-24 xl:h-20 object-contain";
 
   return (
     <div className="w-full py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#000319' }}>
@@ -20,12 +20,15 @@ const TechStackComponent = () => {
           {platforms.map((platform) => (
             <div
               key={platform.name}
-              className="hover:opacity-80 hover:scale-110 transition-all duration-300"
+              className="hover:opacity-80 hover:scale-110 transition-all duration-300 relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-24 xl:h-20"
             >
-              <img
+              <Image
                 src={platform.src}
                 alt={platform.name}
-                className={`${defaultClasses} ${platform.className}`}
+                fill
+                sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, (max-width: 1024px) 56px, (max-width: 1280px) 64px, 96px"
+                className={`object-contain ${platform.className || ""}`}
+                loading="lazy"
               />
             </div>
           ))}

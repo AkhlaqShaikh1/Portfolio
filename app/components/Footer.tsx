@@ -1,6 +1,6 @@
 import React from "react";
 import MagicButton from "./MagicButton";
-import { FaLocationArrow } from "react-icons/fa";
+import { ArrowUpRight } from "lucide-react";
 import { socialMedia } from "@/data";
 import Image from "next/image";
 
@@ -19,7 +19,7 @@ const Footer = () => {
         <a href="mailto:coms.adv.eng@gmail.com">
           <MagicButton
             title="Let's get in touch"
-            icon={<FaLocationArrow />}
+            icon={<ArrowUpRight className="w-4 h-4" />}
             position="right"
           />
         </a>

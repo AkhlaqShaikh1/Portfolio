@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react"
 import { projects } from "@/data"
 import { PinContainer } from "./ui/3d-pin"
-import { FaLocationArrow } from "react-icons/fa"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 
 export default function ProjectsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -120,15 +120,19 @@ export default function ProjectsCarousel() {
                         className="relative overflow-hidden w-full h-full rounded-xl sm:rounded-2xl lg:rounded-3xl"
                         style={{ backgroundColor: "#13162d" }}
                       >
-                        <img 
-                          src="/bg.png" 
-                          alt="background" 
-                          className="w-full h-full object-cover" 
+                        <Image
+                          src="/bg.png"
+                          alt="background"
+                          fill
+                          className="object-cover"
+                          loading="lazy"
                         />
-                        <img
+                        <Image
                           src={project.img || "/placeholder.svg"}
                           alt={project.title}
-                          className="z-30 absolute bottom-0 left-0 w-full h-full object-cover"
+                          fill
+                          className="z-30 object-cover"
+                          loading="lazy"
                         />
                       </div>
                     </div>
@@ -154,14 +158,17 @@ export default function ProjectsCarousel() {
                           <div
                             key={idx}
                             style={{ transform: `translateX(-${5 * idx * 2}px)` }}
-                            className="border border-white/[0.2] rounded-full bg-black 
+                            className="border border-white/[0.2] rounded-full bg-black
                               w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-10 xl:h-10
-                              flex justify-center items-center"
+                              flex justify-center items-center relative"
                           >
-                            <img 
-                              src={icon || "/placeholder.svg"} 
-                              alt={`icon-${idx}`} 
-                              className="p-1 sm:p-1.5 lg:p-2" 
+                            <Image
+                              src={icon || "/placeholder.svg"}
+                              alt={`icon-${idx}`}
+                              width={24}
+                              height={24}
+                              className="p-1 sm:p-1.5 lg:p-2"
+                              loading="lazy"
                             />
                           </div>
                         ))}
@@ -174,9 +181,8 @@ export default function ProjectsCarousel() {
                         >
                           Check Live Site
                         </p>
-                        <FaLocationArrow 
-                          className="ms-1.5 sm:ms-2 lg:ms-3 w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-4 lg:h-4" 
-                          color="#CBACF9" 
+                        <ArrowUpRight
+                          className="ms-1.5 sm:ms-2 lg:ms-3 w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-[#CBACF9]"
                         />
                       </div>
                     </div>
