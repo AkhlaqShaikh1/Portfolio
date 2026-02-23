@@ -1,8 +1,6 @@
-import React from "react";
-import MagicButton from "./MagicButton";
-import { ArrowUpRight } from "lucide-react";
 import { socialMedia } from "@/data";
 import Image from "next/image";
+import ContactForm from "./ContactForm";
 
 const Footer = () => {
   return (
@@ -13,16 +11,12 @@ const Footer = () => {
           <span className="text-purple"> world?</span>
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to us today and let's discuss how we can make an{" "}
+          Reach out to us today and let&apos;s discuss how we can make an{" "}
           <span className="text-purple">impact</span>
         </p>
-        <a href="mailto:coms.adv.eng@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<ArrowUpRight className="w-4 h-4" />}
-            position="right"
-          />
-        </a>
+        <div className="w-full mt-8">
+          <ContactForm />
+        </div>
       </div>
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
@@ -39,7 +33,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex items-center md:gap-3 gap-6 mt-2">
-          {socialMedia.map((item, index) => (
+          {socialMedia.map((item) => (
             <a href={item.link} target="_blank" key={item.id}>
               <div
                 key={item.id}
