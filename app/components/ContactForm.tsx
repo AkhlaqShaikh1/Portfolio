@@ -1,7 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { Turnstile, TurnstileInstance } from "@marsidev/react-turnstile";
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -10,8 +13,10 @@ const ContactForm = () => {
     subject: "",
     message: "",
   });
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const turnstileRef = useRef<TurnstileInstance>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -21,6 +26,13 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!turnstileToken) {
+      setStatus("error");
+      setErrorMessage("Please complete the verification.");
+      return;
+    }
+
     setStatus("loading");
     setErrorMessage("");
 
@@ -32,6 +44,7 @@ const ContactForm = () => {
         },
         body: JSON.stringify({
           access_key: "c1cbfaa2-b7c5-4cda-bc6a-0af868ee07de",
+          "cf-turnstile-response": turnstileToken,
           ...formData,
         }),
       });
@@ -41,13 +54,16 @@ const ContactForm = () => {
       if (result.success) {
         setStatus("success");
         setFormData({ name: "", email: "", subject: "", message: "" });
+        setTurnstileToken(null);
       } else {
         setStatus("error");
         setErrorMessage(result.message || "Something went wrong. Please try again.");
+        turnstileRef.current?.reset();
       }
     } catch {
       setStatus("error");
       setErrorMessage("Network error. Please check your connection and try again.");
+      turnstileRef.current?.reset();
     }
   };
 
@@ -63,7 +79,7 @@ const ContactForm = () => {
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
             <p className="text-white-200 mb-6">
-              Thank you for reaching out. We'll get back to you as soon as possible.
+              Thank you for reaching out. We&apos;ll get back to you as soon as possible.
             </p>
             <button
               onClick={() => setStatus("idle")}
@@ -153,6 +169,25 @@ const ContactForm = () => {
             />
           </div>
 
+          {/* Cloudflare Turnstile */}
+          {TURNSTILE_SITE_KEY && (
+            <div className="flex justify-center">
+              <Turnstile
+                ref={turnstileRef}
+                siteKey={TURNSTILE_SITE_KEY}
+                onSuccess={(token) => setTurnstileToken(token)}
+                onError={() => {
+                  setTurnstileToken(null);
+                  setErrorMessage("Verification failed. Please try again.");
+                }}
+                onExpire={() => setTurnstileToken(null)}
+                options={{
+                  theme: "dark",
+                }}
+              />
+            </div>
+          )}
+
           {/* Error message */}
           {status === "error" && (
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 px-4 py-3 rounded-lg">
@@ -164,7 +199,7 @@ const ContactForm = () => {
           {/* Submit button */}
           <button
             type="submit"
-            disabled={status === "loading"}
+            disabled={status === "loading" || !turnstileToken}
             className="relative w-full inline-flex h-14 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-purple disabled:opacity-70 disabled:cursor-not-allowed group"
           >
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />

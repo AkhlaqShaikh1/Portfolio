@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   verification: {
     google: "eCHIO-2OpUeJ6VDdrZBF7CArj5cbpciRSYqQ4JV6uvg",
   },
+  other: {
+    "google-adsense-account": "ca-pub-9561929397474889",
+  },
 };
 
 export default function RootLayout({
