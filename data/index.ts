@@ -1,5 +1,6 @@
 export const navItems = [
     { name: "About", link: "#about" },
+    { name: "Apps", link: "#orbs" },
     { name: "Projects", link: "#projects" },
     { name: "Contact", link: "#contact" },
   ];
@@ -170,6 +171,34 @@ export const navItems = [
     },
   ];
   
+  export const orbsFeatures = [
+    { label: "Dashboard", image: "/orbs-dashboard.png" },
+    { label: "Team Management", image: "/orbs-team-management.png" },
+    { label: "Accounting", image: "/orbs-accounting.png" },
+    { label: "Purchases", image: "/orbs-purchases.png" },
+    { label: "Sales", image: "/orbs-sales.png" },
+    { label: "Inventory", image: "/orbs-inventory.png" },
+  ];
+
+  export const emailifyFeatures = [
+    { label: "Signatures", image: "/emailify-signatures.png" },
+    { label: "Click Tracking", image: "/emailify-tracking.png" },
+    { label: "Branding", image: "/emailify-branding.png" },
+    { label: "Auto Sync", image: "/emailify-sync.png" },
+    { label: "Team Management", image: "/emailify-team.png" },
+    { label: "Cross-Platform", image: "/emailify-platforms.png" },
+  ];
+
+  export const budgetScreens = [
+    { label: "Security", image: "/budget-security.png" },
+    { label: "Dashboard", image: "/budget-dashboard.png" },
+    { label: "Expenses", image: "/budget-expenses.png" },
+    { label: "Features", image: "/budget-features.png" },
+    { label: "Transactions", image: "/budget-transactions.png" },
+    { label: "Reports", image: "/budget-reports.png" },
+    { label: "Live Tracking", image: "/budget-live-tracking.png" },
+  ];
+
   export const socialMedia = [
     // {
     //   id: 1,
