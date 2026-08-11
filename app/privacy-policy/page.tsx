@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Coms Advance Engineering",
+  title: "Privacy Policy",
   description: "Privacy Policy for Coms Advance Engineering apps and services",
+  alternates: { canonical: "/privacy-policy" },
+  robots: { index: true, follow: true },
 };
 
 export default function PrivacyPolicy() {

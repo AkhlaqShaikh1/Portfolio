@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 interface Screen {
   label: string
@@ -14,6 +15,7 @@ interface ComingSoonProps {
   tagline: string
   description: string
   screens: Screen[]
+  detailHref?: string
 }
 
 export default function ComingSoon({
@@ -22,6 +24,7 @@ export default function ComingSoon({
   tagline,
   description,
   screens,
+  detailHref,
 }: ComingSoonProps) {
   const [active, setActive] = useState(0)
 
@@ -131,6 +134,16 @@ export default function ComingSoon({
             >
               {description}
             </p>
+
+            {detailHref && (
+              <Link
+                href={detailHref}
+                className="inline-flex items-center gap-1.5 mt-8 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border border-white/[0.2] text-white hover:scale-105"
+                style={{ backgroundColor: "rgba(17, 25, 40, 0.6)" }}
+              >
+                Learn More
+              </Link>
+            )}
 
             {/* Dot indicators showing images cycling behind */}
             <div className="flex justify-center gap-2 mt-10">

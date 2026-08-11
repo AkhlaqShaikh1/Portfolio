@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
 interface Feature {
@@ -16,6 +17,7 @@ interface ProductShowcaseProps {
   description: string
   features: Feature[]
   link?: string
+  detailHref?: string
 }
 
 export default function ProductShowcase({
@@ -25,6 +27,7 @@ export default function ProductShowcase({
   description,
   features,
   link,
+  detailHref,
 }: ProductShowcaseProps) {
   const [active, setActive] = useState(0)
   const [paused, setPaused] = useState(false)
@@ -78,21 +81,32 @@ export default function ProductShowcase({
           >
             {description}
           </p>
-          {link && (
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 mt-5 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border border-[#CBACF9] text-white hover:scale-105"
-              style={{
-                backgroundColor: "rgba(203, 172, 249, 0.15)",
-                boxShadow: "0 0 20px rgba(203, 172, 249, 0.2)",
-              }}
-            >
-              Visit Live Site
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-          )}
+          <div className="flex flex-wrap justify-center gap-3 mt-5">
+            {link && (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border border-[#CBACF9] text-white hover:scale-105"
+                style={{
+                  backgroundColor: "rgba(203, 172, 249, 0.15)",
+                  boxShadow: "0 0 20px rgba(203, 172, 249, 0.2)",
+                }}
+              >
+                Visit Live Site
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+            )}
+            {detailHref && (
+              <Link
+                href={detailHref}
+                className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border border-white/[0.2] text-white hover:scale-105"
+                style={{ backgroundColor: "rgba(17, 25, 40, 0.75)" }}
+              >
+                Learn More
+              </Link>
+            )}
+          </div>
         </div>
 
         {/* Feature tabs — active one follows auto-scroll */}

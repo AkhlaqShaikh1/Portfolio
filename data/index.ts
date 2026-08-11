@@ -1,8 +1,38 @@
 export const navItems = [
-    { name: "About", link: "#about" },
-    { name: "Apps", link: "#orbs" },
-    { name: "Projects", link: "#projects" },
-    { name: "Contact", link: "#contact" },
+    { name: "About", link: "/about" },
+    { name: "Products", link: "/products" },
+    { name: "Projects", link: "/projects" },
+    { name: "Blog", link: "/blog" },
+    { name: "Contact", link: "/contact" },
+  ];
+
+  export const footerLinks = [
+    {
+      heading: "Products",
+      links: [
+        { name: "All Products", href: "/products" },
+        { name: "ORBS - Business Management", href: "/products/orbs" },
+        { name: "Emailify - Email Signatures", href: "/products/emailify" },
+        { name: "BudgetGuard - Budget App", href: "/products/budgetguard" },
+      ],
+    },
+    {
+      heading: "Company",
+      links: [
+        { name: "About Us", href: "/about" },
+        { name: "Projects", href: "/projects" },
+        { name: "Contact", href: "/contact" },
+        { name: "Privacy Policy", href: "/privacy-policy" },
+      ],
+    },
+    {
+      heading: "Resources",
+      links: [
+        { name: "Blog", href: "/blog" },
+        { name: "ORBS App", href: "https://orbs.comengineering.services" },
+        { name: "Emailify App", href: "https://emailify.comengineering.services" },
+      ],
+    },
   ];
   
   export const gridItems = [

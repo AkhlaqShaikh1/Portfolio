@@ -4,12 +4,45 @@ import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import ContactCTA from "./components/CTA";
+import JsonLd from "./components/JsonLd";
+import { siteConfig } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Coms Advance Engineering - Transforming Ideas into Reality",
-  description: "Modern portfolio website for Coms Advance Engineering",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Coms Advance Engineering - Transforming Ideas into Reality",
+    template: "%s | Coms Advance Engineering",
+  },
+  description: siteConfig.description,
+  keywords: [
+    "software development company",
+    "custom web application development",
+    "mobile app development",
+    "Flutter app development",
+    "AI integration services",
+    "full stack development",
+    "Coms Advance Engineering",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: siteConfig.name,
+    title: "Coms Advance Engineering - Transforming Ideas into Reality",
+    description: siteConfig.description,
+    url: siteConfig.url,
+    images: [{ url: "/logo.png", width: 500, height: 500, alt: siteConfig.name }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Coms Advance Engineering - Transforming Ideas into Reality",
+    description: siteConfig.description,
+    images: ["/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
@@ -22,6 +55,23 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  logo: siteConfig.logo,
+  description: siteConfig.description,
+  sameAs: [siteConfig.linkedin],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteConfig.name,
+  url: siteConfig.url,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,6 +80,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={websiteJsonLd} />
         {/* Meta Pixel Code */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
