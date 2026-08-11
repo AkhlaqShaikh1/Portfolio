@@ -141,7 +141,7 @@ export default function ComingSoon({
                 className="inline-flex items-center gap-1.5 mt-8 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border border-white/[0.2] text-white hover:scale-105"
                 style={{ backgroundColor: "rgba(17, 25, 40, 0.6)" }}
               >
-                Learn More
+                Learn More About {name}
               </Link>
             )}
 

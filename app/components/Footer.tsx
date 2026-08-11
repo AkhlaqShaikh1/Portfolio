@@ -63,7 +63,7 @@ const Footer = ({ showContactForm = true }: { showContactForm?: boolean }) => {
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <div className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt="Coms Advance Engineering logo"
             width={40}
             height={40}

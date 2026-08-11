@@ -116,7 +116,7 @@ export default function ProductsPage() {
                     href={`/products/${product.slug}`}
                     className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full text-sm font-medium border border-purple/40 text-white hover:scale-105 transition-all bg-purple/10"
                   >
-                    Learn More
+                    Learn More About {product.name}
                   </Link>
                   {product.link && (
                     <a

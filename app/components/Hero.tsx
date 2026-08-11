@@ -26,10 +26,11 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] m:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <Image
-            src="/logo.png"
-            alt="COMS Logo"
+            src="/logo.webp"
+            alt="Coms Advance Engineering logo"
             width={500}
             height={500}
+            priority
             className="mb-6 rounded-xl shadow-lg"
           />
           <h2 className="uppercase tracking-widest text-xs text-blue-100 max-w-80"></h2>

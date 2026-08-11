@@ -43,7 +43,7 @@ export const navItems = [
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
       titleClassName: "justify-end",
-      img: "/b1.svg",
+      img: "/b1.webp",
       spareImg: "",
     },
     {
@@ -63,7 +63,7 @@ export const navItems = [
       className: "lg:col-span-2 md:col-span-3 md:row-span-1 lg:min-h-[30vh]",
       imgClassName: "",
       titleClassName: "justify-start",
-      img: "/grid.svg",
+      img: "/grid-bento.webp",
       spareImg: "/b4.svg",
     },
   ];
@@ -89,7 +89,7 @@ export const navItems = [
       id: 3,
       title: "Commercio - A blockchain based E-commerce platform",
       des: "A blockchain-based e-commerce platform built using Flutter, MongoDB, Ethereum, and Solidity and ExpressJS for the backend.",
-      img: "/p3.png",
+      img: "/p3-project.webp",
       iconLists: [ "/flutter.svg","/mongodb-icon.svg","/ts.svg", "/eth.svg" ,"/node.svg"],
       link: "https://github.com/AkhlaqShaikh1/",
     },
@@ -137,7 +137,7 @@ export const navItems = [
       id: 9,
       title: "Vincent deFilippo",
       des: "Vincent deFilippo is a New York-based life coach and Monroe College professor offering career consulting services with packages ranging from 5 to 20 sessions",
-      img: "/career.jpg",
+      img: "/career.webp",
       iconLists: [ "/wordpress.svg"],
       link: "https://www.vincentdefilippo.com/career-mentor",
     },
@@ -202,31 +202,31 @@ export const navItems = [
   ];
   
   export const orbsFeatures = [
-    { label: "Dashboard", image: "/orbs-dashboard.png" },
-    { label: "Team Management", image: "/orbs-team-management.png" },
-    { label: "Accounting", image: "/orbs-accounting.png" },
-    { label: "Purchases", image: "/orbs-purchases.png" },
-    { label: "Sales", image: "/orbs-sales.png" },
-    { label: "Inventory", image: "/orbs-inventory.png" },
+    { label: "Dashboard", image: "/orbs-dashboard.webp" },
+    { label: "Team Management", image: "/orbs-team-management.webp" },
+    { label: "Accounting", image: "/orbs-accounting.webp" },
+    { label: "Purchases", image: "/orbs-purchases.webp" },
+    { label: "Sales", image: "/orbs-sales.webp" },
+    { label: "Inventory", image: "/orbs-inventory.webp" },
   ];
 
   export const emailifyFeatures = [
-    { label: "Signatures", image: "/emailify-signatures.png" },
-    { label: "Click Tracking", image: "/emailify-tracking.png" },
-    { label: "Branding", image: "/emailify-branding.png" },
-    { label: "Auto Sync", image: "/emailify-sync.png" },
-    { label: "Team Management", image: "/emailify-team.png" },
-    { label: "Cross-Platform", image: "/emailify-platforms.png" },
+    { label: "Signatures", image: "/emailify-signatures.webp" },
+    { label: "Click Tracking", image: "/emailify-tracking.webp" },
+    { label: "Branding", image: "/emailify-branding.webp" },
+    { label: "Auto Sync", image: "/emailify-sync.webp" },
+    { label: "Team Management", image: "/emailify-team.webp" },
+    { label: "Cross-Platform", image: "/emailify-platforms.webp" },
   ];
 
   export const budgetScreens = [
-    { label: "Security", image: "/budget-security.png" },
-    { label: "Dashboard", image: "/budget-dashboard.png" },
-    { label: "Expenses", image: "/budget-expenses.png" },
-    { label: "Features", image: "/budget-features.png" },
-    { label: "Transactions", image: "/budget-transactions.png" },
-    { label: "Reports", image: "/budget-reports.png" },
-    { label: "Live Tracking", image: "/budget-live-tracking.png" },
+    { label: "Security", image: "/budget-security.webp" },
+    { label: "Dashboard", image: "/budget-dashboard.webp" },
+    { label: "Expenses", image: "/budget-expenses.webp" },
+    { label: "Features", image: "/budget-features.webp" },
+    { label: "Transactions", image: "/budget-transactions.webp" },
+    { label: "Reports", image: "/budget-reports.webp" },
+    { label: "Live Tracking", image: "/budget-live-tracking.webp" },
   ];
 
   export const socialMedia = [
