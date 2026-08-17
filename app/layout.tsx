@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import ContactCTA from "./components/CTA";
@@ -116,6 +117,7 @@ export default function RootLayout({
           <ContactCTA />
           {children}
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
