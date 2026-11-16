@@ -173,30 +173,30 @@ export const navItems = [
   export const workExperience = [
     {
       id: 1,
-      title: "Senior Software Engineer - Intellexal Solutions",
-      desc: "Architecting robust systems with Docker, CI/CD pipelines, queues, cron jobs, and microservices — keeping everything running smoothly at scale.",
+      title: "Web Application Development",
+      desc: "Custom web apps, dashboards, and SaaS platforms built with React, Next.js, and Node.js — fast, secure, and SEO-ready.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
     {
       id: 2,
-      title: "Application Development",
-      desc: "Designed and developed scalable web and mobile solutions, including cross-platform iOS and Android applications using Flutter.",
-      className: "md:col-span-2", // change to md:col-span-2
+      title: "Mobile App Development",
+      desc: "Cross-platform iOS and Android apps with Flutter and React Native, taken from wireframe to App Store and Google Play launch.",
+      className: "md:col-span-2",
       thumbnail: "/exp2.svg",
     },
     {
       id: 3,
-      title: "Software Engineer - Full Stack Development",
-      desc: "Full stack developer building seamless user experiences and robust backend systems with modern frameworks.",
+      title: "AI & Automation",
+      desc: "LLM integrations, chatbots, document processing, and workflow automation that cut manual work and add real business value.",
       className: "md:col-span-2",
       thumbnail: "/exp4.svg",
     },
     {
       id: 4,
-      title: "Freelance Developer => Open for New Projects",
-      desc: "Turning ideas into fully deployed apps, from first wireframe to App Store launch. Let's build something great together.",
-      className: "md:col-span-2", // change to md:col-span-2
+      title: "Cloud, DevOps & Maintenance",
+      desc: "Docker, CI/CD pipelines, queues, cron jobs, and monitoring — plus ongoing support so your product keeps running smoothly at scale.",
+      className: "md:col-span-2",
       thumbnail: "/exp3.svg",
     },
   ];

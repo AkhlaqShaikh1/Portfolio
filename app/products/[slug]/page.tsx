@@ -62,7 +62,7 @@ export default async function ProductPage({
     name: product.name,
     description: product.longDescription,
     applicationCategory: product.category,
-    operatingSystem: "Web",
+    operatingSystem: product.operatingSystem ?? "Web",
     url: product.link ?? absoluteUrl(`/products/${product.slug}`),
     publisher: {
       "@type": "Organization",
@@ -160,6 +160,7 @@ export default async function ProductPage({
             description={product.description}
             features={product.features}
             link={product.link}
+            linkLabel={product.linkLabel}
           />
         )}
 

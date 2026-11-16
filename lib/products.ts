@@ -22,6 +22,8 @@ export interface Product {
   longDescription: string;
   features: { label: string; image: string }[];
   link?: string;
+  linkLabel?: string;
+  operatingSystem?: string;
   comingSoon?: boolean;
   category: string;
   keywords: string[];
@@ -157,7 +159,9 @@ export const products: Product[] = [
     longDescription:
       "BudgetGuard is a privacy-first personal budgeting app. All of your financial data stays on your device — no cloud accounts, no ads, no tracking. Record income and expenses, monitor transactions live, and get clear reports and insights into your spending, with your privacy guaranteed by design.",
     features: budgetScreens,
-    comingSoon: true,
+    link: "https://play.google.com/store/apps/details?id=com.comsengineering.budgetguard",
+    linkLabel: "Get it on Google Play",
+    operatingSystem: "Android",
     category: "FinanceApplication",
     keywords: [
       "budget app",
@@ -201,9 +205,9 @@ export const products: Product[] = [
           "No. BudgetGuard is all-local: your financial data is stored only on your device and never leaves it.",
       },
       {
-        question: "When will BudgetGuard be available?",
+        question: "Where can I download BudgetGuard?",
         answer:
-          "BudgetGuard is currently in development and coming soon. Follow Coms Advance Engineering for launch updates.",
+          "BudgetGuard is available now for Android on the Google Play Store.",
       },
     ],
   },

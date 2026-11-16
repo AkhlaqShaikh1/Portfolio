@@ -17,6 +17,7 @@ interface ProductShowcaseProps {
   description: string
   features: Feature[]
   link?: string
+  linkLabel?: string
   detailHref?: string
 }
 
@@ -27,6 +28,7 @@ export default function ProductShowcase({
   description,
   features,
   link,
+  linkLabel = "Visit Live Site",
   detailHref,
 }: ProductShowcaseProps) {
   const [active, setActive] = useState(0)
@@ -93,7 +95,7 @@ export default function ProductShowcase({
                   boxShadow: "0 0 20px rgba(203, 172, 249, 0.2)",
                 }}
               >
-                Visit Live Site
+                {linkLabel}
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             )}

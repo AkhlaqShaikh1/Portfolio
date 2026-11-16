@@ -125,7 +125,7 @@ export default function ProductsPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full text-sm font-medium border border-white/[0.2] text-white hover:scale-105 transition-all"
                     >
-                      Visit Live Site
+                      {product.linkLabel ?? "Visit Live Site"}
                       <ArrowUpRight className="w-4 h-4" />
                     </a>
                   )}

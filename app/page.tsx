@@ -17,7 +17,6 @@ const Grid = dynamic(() => import("./components/Grid"), {
 });
 const TechStackComponent = dynamic(() => import("./components/TechStack"));
 const ProductShowcase = dynamic(() => import("./components/ProductShowcase"));
-const ComingSoon = dynamic(() => import("./components/ComingSoon"));
 const RecentProjects = dynamic(() => import("./components/RecentProjects"));
 const Process = dynamic(() => import("./components/Process"));
 const Footer = dynamic(() => import("./components/Footer"));
@@ -61,12 +60,14 @@ export default function Home() {
           detailHref="/products/emailify"
         />
 
-        <ComingSoon
+        <ProductShowcase
           id="budgetguard"
           name="BudgetGuard"
           tagline="Privacy-First Budget Management"
           description="An all-local, no ads, privacy-first financial budget maker. Track income, expenses, and get smart insights — all without your data ever leaving your device."
-          screens={budgetScreens}
+          features={budgetScreens}
+          link="https://play.google.com/store/apps/details?id=com.comsengineering.budgetguard"
+          linkLabel="Get it on Google Play"
           detailHref="/products/budgetguard"
         />
 
